@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <stdio.h>   /* more headers goes there */
+#include <stdlib.h>/* more headers goes there */
 #include <time.h>
 /* more headers goes there */
 
