@@ -7,7 +7,6 @@
  *Return : Always 0 (success)
  */
 int main(void)
-/*Return : Always 1 (success)*/
 {
 	int n;
 	int digit;
