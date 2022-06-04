@@ -7,6 +7,7 @@
  *Return : Always 0 (success)
  */
 int main(void)
+/*Return : Always 0 (success)*/
 {
 	int n;
 	int digit;
@@ -20,7 +21,8 @@ int main(void)
 	}
 	else if (digit == 0)
 	{
-		printf("Last digit of %d is %d and is 0\n", n, digit); 
+		printf("Last digit of %d is %d and is 0\n", n, digit);
+		
 	}
 	else
 	{
