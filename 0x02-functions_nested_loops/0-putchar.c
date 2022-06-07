@@ -1,5 +1,6 @@
 #include <unistd.h>
 #include <stdio.h>
+#include "main.h"
 /**
 * main - prints _putchar
 * Return: Always 0 (Success)
