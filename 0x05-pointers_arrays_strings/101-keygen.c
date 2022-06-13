@@ -1,41 +1,21 @@
-#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
-/**
- * _strlen - returns the length of a string
- * @s: string
- * Return: length
- */
-
-int _strlen(char *s)
+int main(void)
 {
-	int len = 0;
+	int myrand;
+	int count;
+	int total;
 
-	while (*s != '\0')
+	srand(time(NULL));
+	for (count = 0, total = 2772; total > 122; count++)
 	{
-		len++;
-		s++;
+		myrand = (rand() % 125) + 1;
+		printf("%c", myrand);
+		total -= myrand;
 	}
+	printf("%c", total);
 
-	return (len);
+	return (0);
 }
-
-/**
- * idx_num_starts - find index where a digit is first found in string
- * @s: string to search
- * Return: integer index where digit is first found
- */
-
-int idx_num_starts(char *s)
-{
-	int i;
-
-	for (i = 0; i < _strlen(s); i++)
-	{
-		if (s[i] >= '0' && s[i] <= '9')
-			return (i);
-	}
-	return (-1); /* return -1 if no digits found */
-}
-
-/**
-
