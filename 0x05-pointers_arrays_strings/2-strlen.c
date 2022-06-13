@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stddef.h>
 /**
  * _strlen -> count number of character in a string
  * @s: point to string
