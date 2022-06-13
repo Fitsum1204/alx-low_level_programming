@@ -3,7 +3,7 @@
 /**
  * _strlen -> count number of character in a string
  * @s: point to string
- * return: length
+ * Return: length
  */
 int _strlen(char *s)
 {
@@ -14,5 +14,5 @@ int _strlen(char *s)
 		i++;
 		s++;
 	}
-	return (i);	
+	return (i);
 }
