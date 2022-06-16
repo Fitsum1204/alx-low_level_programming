@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- *
+ * _strcat
  *
  */
 char *_strcat(char *dest, char *src)
 {
 	int i;
-	
+	char *s= dest;
 	while (*dest != '\0')
 		dest++;
 	dest++;
@@ -15,5 +15,6 @@ char *_strcat(char *dest, char *src)
 		*(dest + i) = *src;
 			src++;
 	}
-	
+	*dest = '\0';
+	return (s);
 }
