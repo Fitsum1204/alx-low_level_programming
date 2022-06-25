@@ -1,2 +1,2 @@
 #!/bin/sh
-ar rc libmy.a *.o
+ar rc libmy.a *.c
