@@ -1,9 +1,15 @@
-#include <stdlib.h>
 #include <stdio.h>
-
-int main(int argc ,char* argv[])
+/**
+ * main - display name of program
+ * @argc:int
+ * @argv:string
+ * Return:int
+ */
+int main(int argc, char *argv[])
 {
-
-	printf("%s\n", argv[0]);
-	return 0;
+	if (argc == 1)
+	{
+		printf("%s\n", argv[0]);
+	}
+	return (0);
 }
