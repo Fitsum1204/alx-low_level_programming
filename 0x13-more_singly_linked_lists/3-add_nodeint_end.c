@@ -1,55 +1,33 @@
 #include "lists.h"
+#include <stdlib.h>
 
 /**
- * _strlen - lenght of string
- * @s:char
- * Return:int
- */
-unsigned int _strlen(char *s)
-{
-	int i;
+ * add_nodeint_end - Add a new node at the end of a list.
+ * @head: Address of the first node of a list.
+ * @n: Integer to insert in the new node.
+ * Return: Address of the new node.
+ **/
 
-		for (i = 0; s[i] != '\0'; i++)
-		{
-			continue;
-		}
-return (i);
-}
-/**
- * add_node_end - add new node at the end of the list
- * @head:pointer to ponter to lined list
- * @str : ponter to string inside the list
- * Return:pointer to a node at the end of the list
- */
-list_t *add_node_end(list_t **head, const char *str)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
-	list_t *new, *last;
+	listint_t *temp, *temp2;
 
-	if (str == NULL)
+	temp = malloc(sizeof(listint_t));
+	if (temp == NULL)
 		return (NULL);
-	new = malloc(sizeof(list_t));
-	if (new == NULL)
-		return (NULL);
-	new->str = strdup(str);
-	if (new->str == NULL)
-	{
-		free(new);
-		return (NULL);
-	}
-	new->len = _strlen(new->str);
-	new->next = NULL;
+
+	temp->n = n;
+	temp->next = NULL;
+
 	if (*head == NULL)
 	{
-		*head = new;
+		*head = temp;
+		return (temp);
 	}
-	else
-	{
-	last = *head;
-		while (last->next)
-		{
-		last = last->next;
-		}
-	last->next = new;
-	}
-	return (new);
+
+	temp2 = *head;
+	while (temp2->next)
+		temp2 = temp2->next;
+	temp2->next = temp;
+	return (temp);
 }
